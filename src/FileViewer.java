@@ -1,11 +1,12 @@
 import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class FileViewer {
 
     private String filename;
 
     private String fileformat;
-    private String[] formats = {"txt","jpeg","jpg","avi"};
 
     public String getFilename() {
 
@@ -16,28 +17,25 @@ public class FileViewer {
     public void setFilename(String filename) {
 
         this.filename = filename;
-
+        Log.consoleOutput("Установлено имя файла.");
     }
 
     public boolean isFileExist() {
-
+        Log.consoleOutput("Проверка на наличие файла: файл найден.");
         return true;
     }
 
 
     public String getFileFormat() {
 
-        if(! Arrays.asList(formats).contains(fileformat)){
-            System.out.println("Неверный формат файла");
-            String msg = "Неверный формат файла";
-            Log.consoleOutput(msg);
-            return "";
-        }
+        Log.consoleOutput("Получние формата файла...");
+
         return this.fileformat;
     }
 
     public void closeFile() {
-
+        Log.consoleOutput("Закрытие файла.");
     }
+
 
 }
