@@ -8,8 +8,8 @@ public class Main {
         String info =
                 "Лабораторная работа №3 - " +
                 "\"Классы и объекты\n" +
-                "Выполнил: Семёнов Е.А.";
-
+                "Выполнил: Семёнов Е.А. группа: ПЭ-171";
+        System.out.println(info);
         FileViewerFactory fvf = new FileViewerFactory(args[0]);
         fvf.createFileViewer();
 
